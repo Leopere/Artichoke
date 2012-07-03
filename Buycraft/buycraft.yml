@@ -13,7 +13,7 @@
 #
 # Do not share this key, keep it safe no matter what!
 #
-secret: SECRET
+secret: BUYCRAFTSECRET
 
 # The command what you will use to access buycrafts
 # services, there are 3 commands available:
