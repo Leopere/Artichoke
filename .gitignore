@@ -1,4 +1,4 @@
-# Dont sync plugins
+﻿# Dont sync plugins
 *.jar
 # Don't publish Schematics
 *.schematic
@@ -18,3 +18,4 @@ CommandBook/sessions/*
 HeroChat/chatters/*
 *.png
 *.wav
+Server_Secrets.txt
