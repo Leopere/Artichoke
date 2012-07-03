@@ -1,0 +1,645 @@
+portals:
+  traineeSpawn:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: system
+    location: 450.0,23.0,-48.0:450.0,23.0,-48.0
+    world: mugen
+    teleportnonplayers: false
+  traineeF:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: system
+    location: 399.0,8.0,-149.0:509.0,8.0,-32.0
+    world: mugen
+    destination: p:traineeSpawn
+    teleportnonplayers: false
+  HoboE:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: system
+    location: 490.0,14.0,-65.0:490.0,14.0,-65.0
+    world: mugen
+    teleportnonplayers: false
+  hoboEn:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: system
+    location: 428.0,20.0,-100.0:428.0,23.0,-98.0
+    world: mugen
+    destination: p:HoboE
+    teleportnonplayers: false
+  workerE:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: system
+    location: 483.0,15.0,-143.0:483.0,15.0,-143.0
+    world: mugen
+    teleportnonplayers: false
+  workerEn:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: system
+    location: 422.0,21.0,-100.0:422.0,23.0,-98.0
+    world: mugen
+    destination: p:workerE
+    teleportnonplayers: false
+  peontestFloor:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 399.0,1.0,-262.0:493.0,1.0,-151.0
+    world: mugen
+    destination: p:ptStartover4
+    teleportnonplayers: false
+  ptStartoverexit:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 458.0,5.0,-164.0:458.0,5.0,-164.0
+    world: mugen
+    teleportnonplayers: false
+  ptStartover1:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 458.0,5.0,-164.0:458.0,5.0,-164.0
+    world: mugen
+    teleportnonplayers: false
+  ptStartover2:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 485.0,4.0,-165.0:485.0,4.0,-165.0
+    world: mugen
+    teleportnonplayers: false
+  ptStartover3:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 427.0,5.0,-162.0:427.0,5.0,-162.0
+    world: mugen
+    teleportnonplayers: false
+  ptStartover4:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 419.0,5.0,-238.0:419.0,5.0,-238.0
+    world: mugen
+    teleportnonplayers: false
+  ptf33:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 425.0,3.0,-224.0:430.0,3.0,-220.0
+    world: mugen
+    destination: p:ptStartover1
+    teleportnonplayers: false
+  ptf41:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 435.0,3.0,-240.0:439.0,3.0,-235.0
+    world: mugen
+    destination: p:ptStartover1
+    teleportnonplayers: false
+  ptf23:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 475.0,2.0,-227.0:480.0,2.0,-223.0
+    world: mugen
+    destination: p:ptStartover1
+    teleportnonplayers: false
+  ptf43:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 477.0,3.0,-240.0:481.0,3.0,-235.0
+    world: mugen
+    destination: p:ptStartover2
+    teleportnonplayers: false
+  ptf12:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 456.0,3.0,-205.0:461.0,3.0,-201.0
+    world: mugen
+    destination: p:ptStartover2
+    teleportnonplayers: false
+  ptf32:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 425.0,3.0,-203.0:430.0,3.0,-199.0
+    world: mugen
+    destination: p:ptStartover2
+    teleportnonplayers: false
+  ptf11:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 448.0,3.0,-184.0:453.0,3.0,-180.0
+    world: mugen
+    destination: p:ptStartover3
+    teleportnonplayers: false
+  ptf22:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 483.0,2.0,-206.0:488.0,2.0,-202.0
+    world: mugen
+    destination: p:ptStartover3
+    teleportnonplayers: false
+  ptf42:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 456.0,3.0,-248.0:460.0,3.0,-243.0
+    world: mugen
+    destination: p:ptStartover3
+    teleportnonplayers: false
+  ptf31:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 417.0,3.0,-182.0:422.0,3.0,-178.0
+    world: mugen
+    destination: p:ptStartover4
+    teleportnonplayers: false
+  ptf13:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 448.0,3.0,-226.0:453.0,3.0,-222.0
+    world: mugen
+    destination: p:ptStartover4
+    teleportnonplayers: false
+  ptf21:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 475.0,2.0,-185.0:480.0,2.0,-181.0
+    world: mugen
+    destination: p:ptStartover4
+    teleportnonplayers: false
+  ptwaterreset:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 399.0,0.0,-251.0:509.0,1.0,-151.0
+    world: mugen
+    destination: p:ptStartover4
+    teleportnonplayers: false
+  ptAccept1:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 459.0,2.0,-229.0:461.0,4.0,-229.0
+    world: mugen
+    destination: p:traineeSpawn
+    teleportnonplayers: false
+  ptAccept3:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 420.0,2.0,-227.0:422.0,4.0,-227.0
+    world: mugen
+    destination: p:traineeSpawn
+    teleportnonplayers: false
+  ptAccept2:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 486.0,2.0,-230.0:488.0,3.0,-230.0
+    world: mugen
+    destination: p:traineeSpawn
+    teleportnonplayers: false
+  ptAccept4:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 484.0,2.0,-245.0:484.0,4.0,-243.0
+    world: mugen
+    destination: p:traineeSpawn
+    teleportnonplayers: false
+  ptDeny3:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 417.0,2.0,-227.0:419.0,4.0,-227.0
+    world: mugen
+    destination: p:ptStartover1
+    teleportnonplayers: false
+  ptDeny1:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 456.0,2.0,-229.0:458.0,4.0,-229.0
+    world: mugen
+    destination: p:ptStartover1
+    teleportnonplayers: false
+  ptDeny2:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 483.0,1.0,-230.0:485.0,3.0,-230.0
+    world: mugen
+    destination: p:ptStartover1
+    teleportnonplayers: false
+  ptDeny4:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    owner: chamunks
+    location: 484.0,2.0,-240.0:484.0,4.0,-238.0
+    world: mugen
+    destination: p:ptStartover1
+    teleportnonplayers: false
+  traineeSixF:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 347.0,8.0,-149.0:397.0,8.0,-95.0
+    world: mugen
+    destination: p:traineeSpawn
+  traineeWorkerE:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 384.0,18.0,-123.0:384.0,19.0,-123.0
+    world: mugen
+  traineeSixE:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 384.0,18.0,-123.0:384.0,19.0,-123.0
+    world: mugen
+  traineeSixEn:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 424.0,21.0,-102.0:426.0,22.0,-102.0
+    world: mugen
+    destination: p:traineeSixE
+  WorkerAcceptEn:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 482.0,14.0,-106.0:484.0,17.0,-105.0
+    world: mugen
+  NorthSpawnGateway:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 9.0,55.0,-21.0:12.0,58.0,-20.0
+    world: Momo
+    destination: p:NorthBuildGateway
+  NorthBuildGateway:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 285.0,65.0,267.0:286.0,69.0,270.0
+    world: Liz
+    destination: p:NorthSpawnGateway
+  SouthSpawnGateway:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: -7.0,37.0,0.0:-6.0,41.0,3.0
+    world: Edo
+    destination: p:SouthBuildGateway
+  SouthBuildGateway:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 536.0,65.0,266.0:537.0,69.0,269.0
+    world: Liz
+    destination: p:SouthSpawnGateway
+  PiroSpawnGateway:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: -240.0,63.0,261.0:-238.0,67.0,262.0
+    world: piro
+    destination: p:EastBuildGateway
+  EastBuildGateway:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 409.0,65.0,142.0:412.0,69.0,143.0
+    world: Liz
+    destination: p:PiroSpawnGateway
+  JinSpawnGateway:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 245.0,68.0,261.0:248.0,72.0,262.0
+    world: Jin
+    destination: p:WestBuildGateway
+  WestSpawnGateway:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: -1256.0,62.0,-356.0:-1253.0,66.0,-355.0
+    world: world
+  WestBuildGateway:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 410.0,65.0,393.0:413.0,69.0,394.0
+    world: Liz
+    destination: p:JinSpawnGateway
+  hoboSpawnE:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 496.0,63.0,219.0:496.0,63.0,219.0
+    world: Liz
+  hoboChooseEn:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 484.0,14.0,-66.0:484.0,16.0,-64.0
+    world: mugen
+    destination: p:hoboSpawnE
+  farmer:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 349.0,66.0,349.0:349.0,66.0,349.0
+    world: Liz
+  worker:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 465.0,72.0,183.0:465.0,72.0,183.0
+    world: Liz
+  hunterSpawnE:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 340.0,66.0,193.0:340.0,66.0,193.0
+    world: Liz
+  builderSpawnE:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 285.0,71.0,268.0:285.0,71.0,268.0
+    world: Liz
+  farmerSpawnE:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 349.0,66.0,349.0:349.0,66.0,349.0
+    world: Liz
+  minerSpawnE:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 438.0,66.0,367.0:438.0,66.0,367.0
+    world: Liz
+  blacksmithSpawnE:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 535.0,66.0,290.0:535.0,66.0,290.0
+    world: Liz
+  assassinSpawnE:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 360.0,62.0,362.0:360.0,62.0,362.0
+    world: Liz
+  SkyBlockE:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 0.0,62.0,0.0:0.0,62.0,0.0
+    world: SkyBlock
+  SkyBlockEn:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: false
+    teleportnonplayers: false
+    owner: chamunks
+    location: 416.0,87.0,267.0:418.0,87.0,269.0
+    world: Liz
+    destination: p:SkyBlockE
+  skyblockFloorEn:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: -9.0,1.0,-9.0:9.0,1.0,9.0
+    world: SkyBlock
+    destination: p:skyblockFloorE
+  skyblockFloorE:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: false
+    teleportnonplayers: false
+    owner: chamunks
+    location: 0.0,65.0,0.0:0.0,65.0,1.0
+    world: SkyBlock
+  skyblockObservationDeckEn:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: -4.0,57.0,4.0:-4.0,66.0,4.0
+    world: SkyBlock
+    destination: p:skyblockObservationDeck
+  skyblockObservationDeck:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: 4.0,82.0,-4.0:4.0,87.0,-4.0
+    world: SkyBlock
+    destination: p:skyblockObservationDeckEn
+  homeworldSpawnEn:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: -1263.0,62.0,-343.0:-1239.0,63.0,-310.0
+    world: world
+    destination: p:lizspawnE
+  lizspawnE:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: false
+    teleportnonplayers: false
+    owner: chamunks
+    location: 404.0,87.0,267.0:406.0,87.0,269.0
+    world: Liz
+  PiroSpleefLoserE:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: -301.0,71.0,21.0:-301.0,72.0,21.0
+    world: piro
+  PiroSpleefLoserEn:
+    entryfee:
+      currency: -1
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    owner: chamunks
+    location: -299.0,63.0,19.0:-292.0,70.0,26.0
+    world: piro

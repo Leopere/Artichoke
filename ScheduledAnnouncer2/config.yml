@@ -1,0 +1,24 @@
+# 
+# ScheduledAnnouncer Configuration File
+# =====================================
+announcement:
+  enabled: true
+  random: false
+  prefix: '&1[&4ReaveCraft&1]&a '
+  interval: 120
+  messages:
+  - Welcome to ReaveCraft Do &b/help &a for more info!
+  - Support us! &6/Vote&a, &c/Youtube&a, &9/Facebook&a, &6/Donate
+  - Make sure to check the &b/help &a to learn more! &a Our &b/help &a Is updated constantly.
+  - Remember that placing &8Iron&a, &6Gold&a, &bDiamond&a blocks protects your Stuff!
+  - Check the &9/Facebook&a for Competition Details Events and Screenshots!
+  - Share Comment Rate and Subscribe to our &c/Youtube&a for tutorials and trailers.
+  - '&6/Donate&a gets you instant rank ups and keeps us alive!'
+  - You can rank up to level 2 automatically when you hit level 75 in your classes skill.
+  - Level 2 players can create /ChestShops to sell their items.
+  - You cannot Pick up items when Disguised.
+  - Getting Hit will undisguise you.
+  - You can quick teleport out of spawn using &b/Worldnames&a to go build!
+  - '&4[[&1DeathReaver&4]]&a Are Admins.'
+  - '&4[&5PainReaver&4]&a Are Moderators.'
+  - 'Think you ve been griefed or robbed? &b/Check&a to know who to &4kill!'

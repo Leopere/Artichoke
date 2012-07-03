@@ -1,0 +1,27 @@
+#
+#
+# Buycrafts configuration file
+# For help, or other information, visit http://buycraft.net
+#
+# Purchase premium for 3.50 GBP (One-off payment)
+# and get more cool features such as an online web store!
+#
+
+
+# Your API secret key.
+# You can find your key in the BuyCraft server panel.
+#
+# Do not share this key, keep it safe no matter what!
+#
+secret: SECRET
+
+# The command what you will use to access buycrafts
+# services, there are 3 commands available:
+#
+# buy
+# donate
+# purchase
+#
+# Lowercase only
+#
+command: buy

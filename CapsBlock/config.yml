@@ -1,0 +1,24 @@
+# CapsBlock
+# Set the percent of caps in a message which defines it as excessive, the default is 50%
+# Choose a response for when an excessive CAPS message is caught, options are...
+# 
+# ReplaceWithLowerCase - Replace all the caps in the message with lowercase and display it as normal
+# ReplaceText - Replace the message text with your own text
+# CancelText - Cancel a message with excessive caps
+# KickOnCaps - Kick a user who sends a message with excessive caps
+# 
+# Once you've chosen and set the option to 'true' you can decide whether or not to notify the user
+# of the action taken, and define your own notification message.
+ReplaceWithLowerCase: false
+NotifyOnReplaceWithLowerCase: true
+ReplaceWithLowerCaseMessage: Your message contained an excessive use of CAPS and has been amended
+ReplaceText: false
+NotifyOnReplaceText: true
+ReplaceTextMessage: Your message contained an excessive use of CAPS and has been replaced
+NewText: I've Used Too many Caps!
+CancelText: true
+NotifyOnCancelText: true
+CancelTextMessage: Your message contained an excessive use of CAPS and has been cancelled
+KickOnCaps: false
+KickMessage: You have been removed for excessive CAPS use
+CapsPercent: 50

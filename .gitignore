@@ -1,0 +1,20 @@
+# Dont sync plugins
+*.jar
+# Don't publish Schematics
+*.schematic
+*/*schematics*/*
+# Don't publish Logs
+*.log
+*.lck
+# Don't publish Secure Keys.
+rsa/
+# Or Databases
+*.db
+bans.csv
+homes.csv
+warps.csv
+Multiverse-Inventories/*/
+CommandBook/sessions/*
+HeroChat/chatters/*
+*.png
+*.wav

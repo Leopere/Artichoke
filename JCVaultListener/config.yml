@@ -1,0 +1,165 @@
+#
+# JCVaultListener 2.0+ Configuration. YAML configuration items rely on
+# indentation to mark the hierarchy/level amongst themselves. Make sure to
+# only use spaces for indentation. If you are seeing YAML parsing errors
+# while JCVaultListener is loading configurations, there is a good chance
+# that they may include tabs or that configuration items are not properly
+# indented.
+#
+
+#
+# Debug mode. If enabled, copies of all messages, actions, and
+# configuration settings are sent to server log.
+#
+debug: false
+
+#
+# Check player. If set to true, votes will be ignored for players that have
+# never logged onto the server. If set to false, any player vote will be
+# accepted. Turn this option on if you are receiving excessive vote spam
+# from top list sites.
+#
+checkPlayer: true
+
+#
+# Broadcast vote flag. Enable/disable broadcasting a configurable server
+# message whenever a vote is received for the server.
+#
+broadcastVote: true
+
+#
+# Configurable messages. Messages can be made multi-line by including a
+# newline character (\n). For example
+#
+#      confirm: "Line 1\nLine 2\nLine 3"
+#
+# configures the vote confirmation message to consist of three lines
+#
+#      Line 1
+#      Line 2
+#      Line 3
+#
+# Multi-line messages MUST be enclosed in double quotes ("). Furthermore,
+# color and font annotations are applicable to a single line. For example,
+# if you want all three lines in the above example to display in gold, you
+# need to apply gold to each line as follows:
+#
+#      confirm: "&6Line 1\n&6Line 2\n&6Line 3"
+#
+# It should also be noted that Minecraft chat displays are limited to a
+# width of 55 characters in total. Lines longer than 55 characters are
+# wrapped and color/font annotations are not carried forward to subsequent
+# lines.
+#
+messages:
+
+  #
+  # Vote confirmation sent to an online player.
+  #
+  confirm: "&1[&4ReaveCraft&1]&6 Thanks {IGN}, for voting on {SERVICE}!"
+  
+  #
+  # Payment confirmation message sent to an online player after currency
+  # units have been added to a valid economy account.
+  #
+  payment: "&1[&4ReaveCraft&1]&a ${AMOUNT} &6Crindars has been added to your bank balance."
+  
+  #
+  # Server message that is broadcast whenever a vote is received. Only
+  # sent if broadcastVote is enabled.
+  #
+  broadcast: "&1[&4ReaveCraft&1]&6 The server was &bvoted &6for by &b{IGN}&6! \n &b{IGN} &6has earned &a${AMMOUNT} &6Crindars! \n &1[&4ReaveCraft&1]&6 Be sure to /Vote Daily!"
+
+#
+# Currency unit adornments.
+#
+currency:
+  
+  #
+  # A prefix to add before the currency amount
+  #
+  prefix: ''
+  
+  #
+  # A suffix to add after the currency amount
+  #
+  suffix: ''
+
+#
+# Reward configurations. Use this section to configure rewards for
+# different voting services. The 'default' configuration is used when
+# there isn't a more specific configuration for a voting service. For
+# example, the following configuration
+#
+# rewards:
+#   default:
+#     type: fixed
+#     amount: 30.0
+#     rate: 0.01
+#   Minestatus:
+#     type: fixed
+#     amount: 50.0
+#     rate: 0.01
+#
+# will reward players 50 currency units when voting on Minestatus and 30
+# currency units when voting on other services.
+#
+# Each voting service is identified by its SERVICE_NAME as given in the
+# vote notification. This name is set by the voting service, NOT
+# JCVaultListener. If you are not sure what to use, contact the voting
+# service and ask. The following list contains some SERVICE_NAMEs for
+# popular voting services.
+#
+#    www.minestatus.net -> Minestatus
+#    minecraftservers.net -> minecraftservers
+#    mcserverlist.net -> MCSL
+#    minecraft-server-list.com -> Minecraft-Server-List.com
+#
+# If you come across other voting services, please feel free to drop a
+# note in the VaultListener's BukkitDev discussion and we'll gladly add it
+# to the list. Please make sure to provide the website address and
+# SERVICE_NAME they use.
+#
+# If you find a SERVICE_NAME that contains spaces or other special
+# characters outside of dashes ('-'), underscores ('_'), or periods ('.'),
+# you'll want to enclose its identifier in quotes. For example, assume a
+# voting service that uses the following SERVICE_NAME
+#
+#    Awesome & Best Votes!!
+#
+# its vote configuration would be as follows
+#
+# rewards:
+#   'Awesome & Best Votes!!':
+#     type: fixed
+#     amount: 100.00
+#     rate: 0.00
+#
+rewards:
+
+  #
+  # Default vote configuration used when no specific vote service
+  # configuration is given. If a default configuration is not given,
+  # JCVaultListener will reward 30 currency units for each received vote.
+  #
+  default:
+  
+    #
+    # Reward type. If set to 'fixed' each player receives a fixed reward as
+    # set by 'amount:'. If set to 'rate', each player is rewarded a
+    # percentage (as set by 'rate:') of their current balance or the fixed
+    # amount, whichever one is greater.
+    #
+    type: rate
+    
+    #
+    # The number of fixed currency units to pay for each vote or the
+    # minimum currency units to pay for rate-based rewards. 
+    #
+    amount: 5.0
+    
+    #
+    # The rate used to calculate a rate-based reward ranging from 0.00 to
+    # 1.00. E.g. 1.0 = 100%, 0.50 = 50%, 0.0075 = 0.75%
+    #
+    rate: 0.01

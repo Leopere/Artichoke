@@ -1,0 +1,519 @@
+# Jobs configuration.
+#
+# Stores information about each job.
+#
+# NOTE: When having multiple jobs, both jobs will give the income payout to the player
+# even if they give the pay for one action (make the configurations with this in mind)
+# and each job will get the respective experience.
+#
+# e.g If player has 2 jobs where job1 gives 10 income and experience for killing a player 
+# and job2 gives 5 income and experience for killing a player. When the user kills a player
+# they will get 15 income and job1 will gain 10 experience and job2 will gain 5 experience.
+
+Jobs:
+  # must be one word
+  Woodcutter:
+    # full name of the job (displayed when browsing a job, used when joining and leaving)
+    # also can be used as a prefix for the user's name if the option is enabled.
+    # Shown as a prefix only when the user has 1 job.
+    #
+    # NOTE: Must be 1 word
+    fullname: Woodcutter
+    # Shortened version of the name of the job. Used as a prefix when the user has more 
+    # than 1 job
+    shortname: W
+    # The colour of the name, for a full list of supported colours, go to the message config.
+    ChatColour: GREEN
+    # Option to let you choose what kind of prefix this job adds to your name.
+    # options are: full, title, job, shortfull, shorttitle, shortjob and none
+    chat-display: full
+    # [OPTIONAL] - the maximum level of this class
+    #max-level: 10
+    # [OPTIONAL] - the maximum number of users on the server that can have this job at 
+    # any one time (includes offline players).
+    #slots: 1
+    # Equation used for calculating how much experience is needed to go to the next level.
+    # Available parameters:
+    #   numjobs - the number of jobs the player has
+    #   joblevel - the level the player has attained in the job.
+    # NOTE: Please take care of the brackets when modifying this equation.
+    leveling-progression-equation: 100*((1.13+(0.01*(numjobs-1)))^(joblevel-1))
+    # Equation used for calculating how much income is given per action for the job level.
+    # Available parameters:
+    #   baseincome - the income for the action at level 1 (as set in the configuration).
+    #   joblevel - the level the player has attained in the job.
+    # NOTE: Please take care of the brackets when modifying this equation.
+    income-progression-equation: baseincome*((1.05)^(joblevel-1))
+     # Equation used for calculating how much experience is given per action for the job level.
+    # Available parameters:
+    #   baseexperience - the experience for the action at level 1 (as set in the configuration).
+    #   joblevel - the level the player has attained in the job.
+    # NOTE: Please take care of the brackets when modifying this equation.
+    experience-progression-equation: baseexperience*((1.05)^(joblevel-1))
+    ########################################################################
+    # Section used to configure what items the job gets paid for, how much
+    # they get paid and how much experience they gain.
+    #
+    # For break and place, the block name or id is used.
+    # You can select a sub-type by using a '-' between the id and the bit
+    # value for the sub-type. e.g LOG-0 = usual log, LOG-2 = birch log
+    # 17-2 = birch log.
+    #
+    # If no sub-type is give, the payout will be for all sub-types.
+    #
+    # To get a list of all available block types, check the
+    # bukkit JavaDocs for a complete list of block types
+    # http://jd.bukkit.org/apidocs/org/bukkit/Material.html
+    # 
+    # For kill tags (Kill and custom-kill), the name is the name of the
+    # mob.
+    # Available mobs:
+    #   Chicken
+    #   Cow
+    #   Pig
+    #   Sheep
+    #   Wolf
+    #   Creeper
+    #   Giant
+    #   Skeleton
+    #   Spider
+    #   Zombie
+    #   PigZombie
+    #   Squid
+    #   Ghast
+    #   Player
+    #   Slime
+    #
+    # NOTE: mob names are case sensitive.
+    #
+    # For custom-kill, it is the name of the job (also case sensitive).
+    # 
+    # NOTE: If a job has both the pay for killing a player and for killing a
+    # specific class, they will get both payments.
+    ########################################################################
+    # payment for breaking a block
+    Break:
+      # block name/id (with optional sub-type)
+      LOG:
+        # base income
+        income: 0.50
+        # base experience
+        experience: 0.50
+    # payment for placing a block
+    Place:
+      SAPLING: 
+        income: 0.10
+        experience: 0.10
+      WOOD: 
+        income: 0.20
+        experience: 0.20
+    # killing a mob
+    Kill:
+      # mob name
+      Player:
+        # base income
+        income: 0.75
+        # base experience
+        experience: 0.75
+    # killing a jobs class
+    custom-kill:
+      # full name of the jobs class
+      Woodcutter:
+        # base income
+        income: 1.0
+        # base experience
+        experience: 1.0
+    # permissions granted for joining class
+    permissions:
+      # example node
+      aaaaaatest.node:
+        # true to give, false to revoke
+        value: true
+        # minimum level needed to grant permission.  Use 0 for all levels
+        level: 0
+      aaaaaatest.node2:
+        value: true
+        # Permission granted when reaching level 10
+        level: 10
+  Miner:
+    fullname: Miner
+    shortname: M
+    ChatColour: DARK_GRAY
+    chat-display: full
+    #max-level: 10
+    #slots: 10
+    leveling-progression-equation: 100*((1.13+(0.01*(numjobs-1)))^(joblevel-1))
+    income-progression-equation: baseincome*((1.05)^(joblevel-1))
+    experience-progression-equation: baseexperience*((1.05)^(joblevel-1))
+    Break:
+      STONE:
+        income: 0.20
+        experience: 0.20
+      COAL_ORE:
+        income: 0.30
+        experience: 0.30
+      REDSTONE_ORE:
+        income: 0.30
+        experience: 0.30
+      IRON_ORE: 
+        income: 0.40
+        experience: 0.40
+      GOLD_ORE:
+        income: 5.0
+        experience: 5.0
+      LAPIS_ORE:
+        income: 0.50
+        experience: 0.50
+      DIAMOND_ORE:
+        income: 0.60
+        experience: 0.60
+      OBSIDIAN: 
+        income: 0.75
+        experience: 0.75
+      MOSSY_COBBLESTONE:
+        income: 0.60
+        experience: 0.60
+    Place:
+      RAILS:
+        income: 0.20
+        experience: 0.20
+      IRON_ORE:
+        income: -0.10
+        experience: 0.0
+      GOLD_ORE:
+        income: -0.10
+        experience: 0.0
+    Kill:
+      Player:
+        income: 0.75
+        experience: 0.75
+    custom-kill:
+      Miner:
+        income: 1.0
+        experience: 1.0
+  Builder:
+    fullname: Builder
+    shortname: B
+    ChatColour: WHITE
+    chat-display: full
+    #max-level: 10
+    #slots: 10
+    leveling-progression-equation: 100*((1.13+(0.01*(numjobs-1)))^(joblevel-1))
+    income-progression-equation: baseincome*((1.05)^(joblevel-1))
+    experience-progression-equation: baseexperience*((1.05)^(joblevel-1))
+    Place:
+      COBBLESTONE:
+        income: 0.10
+        experience: 0.10
+      WOOD:
+        income: 0.15
+        experience: 0.15
+      FENCE:
+        income: 0.15
+        experience: 0.15
+      WOOL:
+        income: 0.15
+        experience: 0.15
+      STONE:
+        income: 0.23
+        experience: 0.23
+      GLOWSTONE:
+        income: 0.30
+        experience: 0.30
+      SANDSTONE:
+        income: 0.20
+        experience: 0.20
+      GLASS:
+        income: 0.30
+        experience: 0.30
+      BRICK:
+        income: 0.40
+        experience: 0.40
+      LAPIS_BLOCK:
+        income: 0.50
+        experience: 0.50
+      DOUBLE_STEP:
+        income: 0.20
+        experience: 0.20
+      STEP:
+        income: 0.20
+        experience: 0.20
+      BOOKSHELF:
+        income: 0.30
+        experience: 0.30
+      WOOD_STAIRS:
+        income: 0.20
+        experience: 0.20
+      COBBLESTONE_STAIRS:
+        income: 0.20
+        experience: 0.20
+      MOSSY_COBBLESTONE:
+        income: 0.50
+        experience: .50
+      DIAMOND_BLOCK:
+        income: .50
+        experience: 0.50
+      GOLD_BLOCK:
+        income: 0.50
+        experience: 0.50
+    Kill:
+      Player:
+        income: 0.75
+        experience: 0.75
+    custom-kill:
+      Builder:
+        income: 1.0
+        experience: 1.0
+  Digger:
+    fullname: Digger
+    shortname: D
+    ChatColour: GOLD
+    chat-display: full
+    #max-level: 10
+    #slots: 10
+    leveling-progression-equation: 100*((1.13+(0.01*(numjobs-1)))^(joblevel-1))
+    income-progression-equation: baseincome*((1.05)^(joblevel-1))
+    experience-progression-equation: baseexperience*((1.05)^(joblevel-1))
+    Break:
+      DIRT:
+        income: 0.20
+        experience: 0.20
+      GRASS:
+        income: 0.20
+        experience: 0.20
+      GRAVEL:
+        income: 0.20
+        experience: 0.20
+      SAND:
+        income: 0.20
+        experience: 0.20
+      CLAY:
+        income: 0.20
+        experience: 0.20
+    Kill:
+      Player:
+        income: 0.75
+        experience: 0.75
+    custom-kill:
+      Digger:
+        income: 1.0
+        experience: 1.0
+  Farmer:
+    fullname: Farmer
+    shortname: Fa
+    ChatColour: BLUE
+    chat-display: full
+    #max-level: 10
+    #slots: 10
+    leveling-progression-equation: 100*((1.13+(0.01*(numjobs-1)))^(joblevel-1))
+    income-progression-equation: baseincome*((1.05)^(joblevel-1))
+    experience-progression-equation: baseexperience*((1.05)^(joblevel-1))
+    Break:
+      CROPS-7:
+        income: 0.40
+        experience: 0.40
+      SUGAR_CANE_BLOCK:
+        income: 0.40
+        experience: 0.40
+    Place:
+      CROPS-0:
+        income: 0.30
+        experience: 0.30
+      SUGAR_CANE_BLOCK:
+        income: 0.10
+        experience: 0.10
+    Kill:
+      Player:
+        income: 0.75
+        experience: 0.75
+    custom-kill:
+      Farmer:
+        income: 1.0
+        experience: 1.0
+  Hunter:
+    fullname: Hunter
+    shortname: H
+    ChatColour: RED
+    chat-display: full
+    #max-level: 10
+    #slots: 10
+    leveling-progression-equation: 100*((1.13+(0.01*(numjobs-1)))^(joblevel-1))
+    income-progression-equation: baseincome*((1.05)^(joblevel-1))
+    experience-progression-equation: baseexperience*((1.05)^(joblevel-1))
+    Kill:
+      Chicken:
+        income: 0.25
+        experience: 0.25
+      Cow:
+        income: 0.25
+        experience: 0.25
+      Pig:
+        income: 0.25
+        experience: 0.25
+      Sheep: 
+        income: 0.25
+        experience: 0.25
+      Wolf: 
+        income: 0.50
+        experience: 0.50
+      Creeper: 
+        income: 1.0
+        experience: 1.0
+      Skeleton: 
+        income: 1.0
+        experience: 1.0
+      Spider:
+        income: 1.0
+        experience: 1.0
+      Zombie: 
+        income: 1.0
+        experience: 1.0
+      Player:
+        income: 0.75
+        experience: 0.75
+    custom-kill:
+      Woodcutter:
+        income: 1.0
+        experience: 1.0
+      Miner:
+        income: 1.0
+        experience: 1.0
+      Digger:
+        income: 1.0
+        experience: 1.0
+      Farmer:
+        income: 1.0
+        experience: 1.0
+      Builder:
+        income: 1.0
+        experience: 1.0
+      Hunter:
+        income: 2.0
+        experience: 2.0
+  Fisherman:
+    fullname: Fisherman
+    shortname: Fi
+    ChatColour: AQUA
+    chat-display: full
+    #max-level: 10
+    #slots: 10
+    leveling-progression-equation: 100*((1.13+(0.01*(numjobs-1)))^(joblevel-1))
+    income-progression-equation: baseincome*((1.05)^(joblevel-1))
+    experience-progression-equation: baseexperience*((1.05)^(joblevel-1))
+    Fish:
+      RAW_FISH:
+        income: 0.40
+        experience: 0.40
+    Kill:
+      Player:
+        income: 0.75
+        experience: 0.75
+    custom-kill:
+      Fisherman:
+        income: 1.0
+        experience: 1.0
+  Weaponsmith:
+    fullname: Weaponsmith
+    shortname: W
+    ChatColour: DARK_PURPLE
+    chat-display: full
+    #max-level: 10
+    #slots: 10
+    leveling-progression-equation: 100*((1.13+(0.01*(numjobs-1)))^(joblevel-1))
+    income-progression-equation: baseincome*((1.05)^(joblevel-1))
+    experience-progression-equation: baseexperience*((1.05)^(joblevel-1))
+    Craft:
+      WOOD_SWORD:
+        income: 0.10
+        experience: 0.10
+      IRON_SWORD:
+        income: 0.20
+        experience: 0.20
+      GOLD_SWORD:
+        income: 0.30
+        experience: 0.30
+      DIAMOND_SWORD:
+        income: 0.40
+        experience: 0.40
+    Smelt:
+      IRON_INGOT:
+        income: 0.20
+        experience: 0.20
+      GOLD_INGOT:
+        income: 0.20
+        experience: 0.20
+  Brewer:
+    fullname: Brewer
+    shortname: Br
+    ChatColour: LIGHT_PURPLE
+    chat-display: full
+    leveling-progression-equation: 100*((1.13+(0.01*(numjobs-1)))^(joblevel-1))
+    income-progression-equation: baseincome*((1.05)^(joblevel-1))
+    experience-progression-equation: baseexperience*((1.05)^(joblevel-1))
+    Brew:
+      NETHER_STALK:
+        income: 0.10
+        experience: 0.10
+      REDSTONE_DUST:
+        income: 0.20
+        experience: 0.20
+      GLOWSTONE_DUST:
+        income: 0.20
+        experience: 0.20
+      SPIDER_EYE:
+        income: 0.20
+        experience: 0.20
+      FERMENTED_SPIDER_EYE:
+        income: 0.20
+        experience: 0.20
+      BLAZE_POWDER:
+        income: 0.20
+        experience: 0.20
+      SUGAR:
+        income: 0.20
+        experience: 0.20
+      SPECKLED_MELON:
+        income: 0.40
+        experience: 0.40
+      MAGMA_CREAM:
+        income: 0.40
+        experience: 0.40
+      GHAST_TEAR:
+        income: 0.40
+        experience: 0.40
+  Enchanter:
+    fullname: Enchanter
+    shortname: E
+    ChatColour: DARK_BLUE
+    chat-display: full
+    #max-level: 10
+    #slots: 10
+    leveling-progression-equation: 100*((1.13+(0.01*(numjobs-1)))^(joblevel-1))
+    income-progression-equation: baseincome*((1.05)^(joblevel-1))
+    experience-progression-equation: baseexperience*((1.05)^(joblevel-1))
+    Enchant:
+      WOOD_SWORD:
+        income: 0.40
+        experience: 0.40
+      IRON_SWORD:
+        income: 0.60
+        experience: 0.60
+      GOLD_SWORD:
+        income: 0.80
+        experience: 0.80
+      DIAMOND_SWORD:
+        income: 1.0
+        experience: 1.0
+  None:
+    fullname: None
+    shortname: N
+    ChatColour: WHITE
+    chat-display: none
+    #max-level: 10
+    #slots: 10
+    leveling-progression-equation: 100*((1.13+(0.01*(numjobs-1)))^(joblevel-1))
+    income-progression-equation: baseincome*((1.05)^(joblevel-1))
+    experience-progression-equation: baseexperience*((1.05)^(joblevel-1))
+    Kill:
+      Player:
+        income: 0.25

@@ -1,0 +1,101 @@
+mugen:
+    442,21,-49:
+    - /blind 60
+    421,21,-61:
+    - /drunk 10
+    442,21,-50:
+    - /blind 60
+    449,21,-79:
+    - /blind 30
+    425,21,-52:
+    - /blind 60
+    422,21,-91:
+    - /blind 20
+    485,13,-65:
+    - /path hobo
+    481,3,-247:
+    - /denyrules
+    483,2,-247:
+    - /denyrules
+    484,1,-229:
+    - /denyrules
+    476,1,-229:
+    - /denyrules
+    457,2,-228:
+    - /denyrules
+    449,2,-228:
+    - /denyrules
+    426,2,-226:
+    - /denyrules
+    418,2,-226:
+    - /denyrules
+    483,2,-239:
+    - /denyrules
+    483,14,-106:
+    - /path worker
+    331,16,-136:
+    - /path hunter
+    330,16,-136:
+    - /path hunter
+    324,16,-101:
+    - /path farmer
+    325,16,-101:
+    - /path farmer
+    325,16,-146:
+    - /path farmer
+    324,16,-146:
+    - /path farmer
+    319,16,-111:
+    - /path miner
+    318,16,-111:
+    - /path miner
+    319,16,-136:
+    - /path blacksmith
+    318,16,-136:
+    - /path blacksmith
+    430,16,-135:
+    - /acceptpath
+    430,16,-133:
+    - /acceptpath
+    431,16,-133:
+    - /spawn
+    431,16,-134:
+    - /spawn
+    431,16,-135:
+    - /spawn
+    418,16,-133:
+    - /denypath
+    418,16,-134:
+    - /denypath
+    418,16,-135:
+    - /denypath
+    425,22,-96:
+    - '@bypass /blind 0'
+    331,16,-111:
+    - /path assassin
+    330,16,-111:
+    - /path assassin
+    430,16,-134:
+    - /promote
+world:
+    -1038,63,-601:
+    - '@bypass /chest'
+    -948,73,-547:
+    - /sp1
+    -946,73,-547:
+    - /sp2
+    -1537,63,-1624:
+    - '@bypass /xload vday'
+    -1536,65,-1626:
+    - '@bypass /xload vday'
+    -1536,63,-1626:
+    - /xload vday
+    -1530,65,-1607:
+    - /xload vday
+    -1252,62,-332:
+    - '@bypass /warp testee'
+    -1251,62,-332:
+    - '@bypass /warp testee'
+Liz:
+    418,87,268:
+    - '@bypass /warp SkyBlock'

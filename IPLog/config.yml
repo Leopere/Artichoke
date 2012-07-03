@@ -1,0 +1,8 @@
+settings:
+  save-delay: -1
+  convert-automatically: true
+  convert-type:
+    list-by-player: true
+    list-by-ip: true
+  track-history-limit: 1000
+  display-login-message: false

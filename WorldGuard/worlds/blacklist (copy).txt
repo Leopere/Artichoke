@@ -1,0 +1,47 @@
+##==========================PlayerBase BlacklistStuffs========================##
+## This Section only effects basic players to prevent griefers.               ##
+## Include this node in Level0 but subtract it from the hobo group.           ##
+##============================================================================##
+#bucket perm hobo
+[326,327]
+ignore-perms=wgblacklist.hoboblock
+on-place=deny,tell
+on-use=deny,tell
+
+##==========================Stuff only admins can do==========================##
+## Just stuff that only effects players but staff are exempt from.            ##
+## Make sure to add these permissions nodes directly to admin classes only.   ##
+##============================================================================##
+#liquid permission
+[8,9,10,11]
+#ignore-groups=admin,moderator
+ignore-perms=wgblacklist.liquidexemption
+on-place=deny
+on-break=allow
+
+#creative block place permission
+[7,19,26,31,34,36,43,51,52,55,59,60,62,63,64,68,71,73,75,78,79,83,90,92,93,94,95,97,104,105,115,117,118,119,120]
+#ignore-groups=admin,moderator
+ignore-perms=wgblacklist.creativeonlyblocks
+on-place=deny
+on-drop=deny,tell,notify
+on-acquire=deny,tell
+
+#block destroy deny permission
+[7,52,120]
+#ignore-groups=admin,moderator
+ignore-perms=wgblacklist.blockdestroyExemption
+on-place=deny
+on-drop=deny
+on-acquire=deny
+
+##==========================Disable drops for admins==========================##
+## This keeps it so that players dont bitch about admin abuse ever.           ##
+## creative block place permission (Admin/Staff filter)                       ##
+## Subtract this from admin classes to activate it                            ##
+##============================================================================##
+[7,19,26,31,34,36,43,51,52,55,59,60,62,63,64,68,71,73,75,78,79,83,90,92,93,94,95,97,104,105,115,117,118,119,120]
+ignore-perms=wgblacklist.creativeonlyblocksadmin
+on-place=allow
+on-drop=deny,tell,notify
+on-acquire=deny,tell

@@ -1,0 +1,37 @@
+RealDrops:
+  enabled: false
+Permissions:
+  enabled: true
+MobTarget:
+  enabled: true
+DisableItemPickup:
+  enabled: true
+Blacklist:
+  creeper: true
+  skeleton: true
+  spider: true
+  giant: false
+  zombie: true
+  slime: false
+  ghast: true
+  pigman: true
+  enderman: true
+  cavespider: true
+  silverfish: true
+  blaze: true
+  magmacube: false
+  enderdragon: false
+  pig: true
+  sheep: true
+  cow: true
+  chicken: true
+  squid: true
+  wolf: true
+  mooshroom: true
+  snowgolem: true
+  villager: true
+  ocelot: true
+  cat: true
+  irongolem: true
+PVPUndisguise:
+  enabled: true

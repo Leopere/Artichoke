@@ -1,0 +1,147 @@
+SkyBlock:
+    9,66,0:
+    - '@bypass clear -a'
+    0,65,-8:
+    - '@bypass /clear -a'
+    0,65,8:
+    - '@bypass /clear -a'
+    -8,65,0:
+    - '@bypass /clear -a'
+    0,66,-9:
+    - '@bypass /clear -a'
+    8,65,0:
+    - '@bypass /clear -a'
+    -4,62,-4:
+    - '@bypass /mvtp Liz'
+    19,65,0:
+    - /sbbs
+    0,65,-19:
+    - /sbbe
+    -19,65,0:
+    - /sbbn
+    0,65,19:
+    - /sbbw
+world:
+    -1249,64,-339:
+    - /denyrules
+    -1249,64,-340:
+    - /acceptrules
+    -1298,91,-407:
+    - /drunk 10
+    -1299,91,-408:
+    - /drunk 15
+    -1299,91,-410:
+    - /drunk 15
+    -1299,91,-411:
+    - /drunk 15
+    -1038,63,-601:
+    - '@bypass /chest'
+mugen:
+    421,21,-61:
+    - /drunk 10
+    449,21,-79:
+    - /blind 30
+    485,13,-65:
+    - /path hobo
+    481,3,-247:
+    - /denyrules
+    483,2,-247:
+    - /denyrules
+    484,1,-229:
+    - /denyrules
+    476,1,-229:
+    - /denyrules
+    457,2,-228:
+    - /denyrules
+    449,2,-228:
+    - /denyrules
+    426,2,-226:
+    - /denyrules
+    418,2,-226:
+    - /denyrules
+    483,2,-239:
+    - /denyrules
+    483,14,-106:
+    - /path worker
+    331,16,-136:
+    - /path hunter
+    330,16,-136:
+    - /path hunter
+    324,16,-101:
+    - /path farmer
+    325,16,-101:
+    - /path farmer
+    319,16,-111:
+    - /path miner
+    318,16,-111:
+    - /path miner
+    319,16,-136:
+    - /path blacksmith
+    318,16,-136:
+    - /path blacksmith
+    418,16,-133:
+    - /denypath
+    418,16,-134:
+    - /denypath
+    418,16,-135:
+    - /denypath
+    425,22,-96:
+    - '@bypass /blind 0'
+    331,16,-111:
+    - /path assassin
+    330,16,-111:
+    - /path assassin
+    475,3,-243:
+    - '@bypass /acceptrules'
+    482,2,-244:
+    - /acceptrules
+    421,2,-225:
+    - /acceptrules
+    460,2,-227:
+    - /acceptrules
+    487,1,-228:
+    - /acceptrules
+    431,15,-133:
+    - /spawn
+    431,15,-135:
+    - /spawn
+    429,17,-135:
+    - /promote <player>
+    431,16,-133:
+    - /promote <player>
+    431,16,-135:
+    - /promote <player>
+    325,16,-146:
+    - /path builder
+    324,16,-146:
+    - /path builder
+Liz:
+    402,98,269:
+    - /chest
+    436,65,371:
+    - /help
+    538,65,290:
+    - /help
+    538,65,291:
+    - /help
+    344,65,196:
+    - /help
+    279,65,268:
+    - /help
+    280,65,268:
+    - /help
+    363,65,362:
+    - /help
+    362,65,362:
+    - /help
+    365,61,367:
+    - /help
+    349,23,278:
+    - /spawn
+Jin: {}
+Momo: {}
+piro:
+    -292,77,24:
+    - /pirospleef1
+    -292,77,21:
+    - /pirospleef1

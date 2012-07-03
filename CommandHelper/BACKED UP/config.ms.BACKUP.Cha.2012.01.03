@@ -1,0 +1,149 @@
+#===========Chamunks's SuperFantastic CustomCommandsConfig=============#
+#This is a much better interface for commands to pex instead of hunting for stupid permissions nodes I can just edit commands here for the users to have
+#How and When I want it.  Makes the failures of inheritance in pex's permissions.yml fall by the wayside.
+#============================It Begins=================================#
+
+
+##+++++++++++++++++++SERVER MAINTENANCE STUFF+++++++++++++++++++++++++##
+##++++++++++++++++++Comment Out Before Launch+++++++++++++++++++++++++##
+maintenancemode:/xchgrp $group = runas(~op, concat(/pex user player() group set $group))
+maintenancemode:/ideal = runas('~op', /butcher) runas('~op', concat('/time day')) runas('~op', concat('/weather sunny'))
+#maintenancemode:/spawn = runas('~op', /spawn)
+maintenancemode:/ra = runas(~op, /reloadaliases) msg('§6AliasesReloaded!')
+maintenancemode:/rape $target = >>>
+	set_pmode($target, SURVIVAL)
+ 	runas(~op, sconcat(/shock, $target))
+	runas(~op, sconcat(/rocket, $target))
+	tmsg($target, 'You have insighted the wrath of Iridious, you shall expect this won\'t feel good.')
+<<<
+##=========================================##
+##Spawn Strategy for the classes           ##
+##This spawncommand does not effect ondeath##
+##Waiting on wraithguard to write that     ##
+##Function in CommandHelper                ##
+##Until then /spawn will execute Mywarp cmd##
+## /warp ClassnameSpawn                    ##
+##=========================================##
+/spawn = runas(~op, concat('/warp ',pgroup()[0],'spawn'))
+
+##======PeonSpecificCommands======##
+#peon:/acceptrules = runas(~op, /pex user player() group set trainee) runas(~op, /warp TraineeSpawn)
+    # This would not work because CH checks permissions for each command run. So in the case above you would have
+    # complete success running the /pex command but the /warp would fail because the "- warp.node" in pex is disabled by default to all.
+    # so the user would upgrade to the Trainee Class fine but would not warp out of spawn.
+peon:/acceptrules = runas('~op', '/warp TraineeSpawn') runas('~op', concat('/pex user ', player(), ' group set trainee'))
+    # This command will change once the "HomeSpawnPlus" plugin is fully configured and the temples are set up.
+peon:/denyrules = runas('~op', '/kick 'player() ''player()' doesnt accept our rules? than 'player()' can play elsewhere. Kicked')
+
+##======TraineeSpecificCommands======##
+trainee:/PathAssassin = runas(~op, /pex user player() group set apprenticeassassin)
+trainee:/PathBlackSmith = runas(~op, /pex user player() group set apprenticeblacksmith)
+trainee:/PathBuilder = runas(~op, /pex user player() group set apprenticebuilder)
+trainee:/PathFarmer = runas(~op, /pex user player() group set apprenticefarmer)
+trainee:/PathHunter = runas(~op, /pex user player() group set apprenticehunter)
+trainee:/PathLumberJack = runas(~op, /pex user player() group set ApprenticeLumberJack)
+trainee:/PathMiner = runas(~op, /pex user player() group set ApprenticeMiner)
+trainee:/PathHobo = runas(~op, /pex user player() group set Hobo)
+trainee:/PathWorker = runas(~op, /pex user player() group set Worker)
+# trainee:/peon = runas(~op, /pex user player() group set peon)
+
+    #Choose Jobs may need to be under a different Grouping due to its need to be under different sections.
+##======Hobo======##
+#Basic stuff Only
+#Return to tutorial area commands
+#DemoteSelfToTraineeToProceed
+#hobo:/trainee = runas(~op, /pex user player() group set trainee) (/warp acceptedrules)
+
+##======Worker======##
+#Return to tutorial area commands
+#DemoteSelfToTraineeToProceed
+worker:/acceptworker = runas('~op', /pex user player() group set worker)
+worker:/backfortraining = runas(~op, /pex user player()  group set trainee) runas('~op', /spawn)
+###=====================ApprenticeClasses============================###
+#This group of classes are meant to only exist within their class's
+#tutorial(temple) area long enough to follow the teachings and trials
+#of their chosen classes or return to the path choosing section.
+###========================It Begins=================================###
+##Assassin##
+#aassassin:/
+##Blacksmith##
+#ablacksmith:/
+##Builder##
+#abuilder:/
+##Farmer##
+#afarmer:/
+##Hunter##
+#ahunter:/
+##Lumberjack##
+#alumberjack:/
+##Miner##
+#aminer:/
+
+###=====================StaffClasses================================###
+#No I'm not talking about gandalfs staff here
+###======================It Begins==================================###
+##Moderator##
+moderator:/pwn $target = >>>
+	set_pmode($target, SURVIVAL)
+	runas(~op, sconcat(/clear, -a, $target))
+ 	runas(~op, sconcat(/lwc, purge, user, $target))
+	runas(~op, sconcat(/pex, user, $target, group, set, banned))
+	runas(~op, sconcat(/lb, rollback, player, $target, since 10m))
+	runas(~op, sconcat('/ch, gmute, $target'))
+	runas(~op, sconcat(/ban, $target))
+<<<
+moderator:/unpwn $target = >>>
+	runas(~op, sconcat(/unban $target))
+	runas(~op, sconcat('/ch, gmute, $target'))
+<<<
+#moderator:/mute player with delayed unmute record who muted when and why
+	#Needs to wait for Events to be released on commandhelper
+moderator:/mute $target = runas(~op, sconcat(/ch, gmute, $target))
+#moderator:/kick [$target] = runas(~op, concat(/kick $target))
+
+##deltateamAndUpSpecificCommands##
+deltateam:/day = runas(~op, /time day)
+deltateam:/night = runas(~op, /time night)
+deltateam:/cr = set_pmode(player(), CREATIVE)
+deltateam:/creative = set_pmode(player(), CREATIVE)
+deltateam:/sur= set_pmode(player(), SURVIVAL)
+#deltateam:/sun =
+#deltateam:/storm
+#deltateam:/spawnm = runas(~op, /spawnmob)
+    #AllowdeltateamToSpawnMobs
+##==================StaffTeleportCommands============================##
+#This needs attention, I plan on people having access to '/homeworld' at some point
+##===================================================================##
+stafftp:/homeworld = runas(~op, /mvtp world)
+stafftp:/goto $target = runas('~op', '/tp player() $target')
+    #TP to player
+stafftp:/summon $target = runas('~op', 'sconcat/tp, $target, player()')
+    #Bring Player to self
+##==================World Shortcuts for Admins=======================##
+# Can be given to others with their appropriate group alias's
+##===================================================================##
+/mugen = runas(~op, /mvtp Mugen)
+/jin = runas(~op, /mvtp Jin)
+/fuu = runas(~op, /mvtp Fuu)
+/liz = runas(~op, /mvtp Liz)
+/old = runas(~op, /mvtp Old)
+/momo = runas(~op, /mvtp Momo)
+/DMT = runas(~op, /mvtp DMT)
+/Reave = runas(~op, /mvtp Reave)
+##==================OTHER HANDY DANDY APPENDAGES=====================##
+# certainly not of the falic sort
+##=========================It Begins=================================##
+/msg [$player] = /tell $player $
+/op [$deny] = msg(§6 Sorry OP is impossible!)
+/plugins = msg(§6 How dare you look there thats inappropriate!)
+/c = msg('§ff §77 §ee §cc §dd §99 §bb §aa\n§00 §88 §66 §44 §55 §11 §33 §22') would output all the color codes.
+/drunk [$timeout]= set_peffect(player(), 9, 1, $timeout)
+/blind [$timeout]= set_peffect(player(), 15, 1, $timeout)
+/sniper [$timeout]= set_peffect(player(), 2, 10, $timeout)
+/flashbang [$target] = >>>
+	lightning(ploc($target), true)
+	set_peffect(player($target), 15, 1, 5)
+	set_peffect(player($target), 9, 1, 12)
+	tmsg(player($target), '§5You have been struk by a flashbang!')
+<<<
+/SetLevel [$target] [$levels] = set_plevel($target, $levels)

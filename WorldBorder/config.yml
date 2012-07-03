@@ -1,0 +1,34 @@
+cfg-version: 5
+message: You have reached the edge of this world.
+round-border: true
+debug-mode: false
+whoosh-effect: true
+knock-back-dist: 50.0
+timer-delay-ticks: 5
+dynmap-border-enabled: true
+dynmap-border-message: The border of the world.
+worlds:
+  Jin:
+    x: 240.5
+    z: 252.5
+    radius: 750
+  Liz:
+    x: 411.48447776834564
+    z: 268.4999999999999
+    radius: 300
+  mugen:
+    x: 415.5
+    z: -230.5
+    radius: 2000
+  world:
+    x: -1248.5
+    z: -322.5
+    radius: 5000
+  piro:
+    x: -238.579245721426
+    z: 260.4755499798607
+    radius: 1500
+  Demolition:
+    x: 119.81608370783316
+    z: -39.605231788000424
+    radius: 300

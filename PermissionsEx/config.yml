@@ -1,0 +1,20 @@
+permissions:
+  backends:
+    file:
+      file: permissions.yml
+    sql:
+      driver: mysql
+      password: SANITIZED
+      user: root
+      uri: mysql://localhost/pex
+  backend: sql
+  superperms:
+    parent-nodes: true
+    enable: true
+    strict-mode: true
+    disable-unmatched: true
+  createUserRecords: true
+  allowOps: true
+  debug: false
+  basedir: plugins/PermissionsEx
+  log-players: false
