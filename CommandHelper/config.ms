@@ -600,9 +600,9 @@ level0:/Fumbledore = runas(~op, /warp Fumbledore)
 level0:/donate = msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), ' Donate using the /buy command.')
 level0:/vote = >>>
         msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), ' Vote Daily at the following links \n', 
-        color(b), 'http://goo.gl/FjExa ', color(2), ' MineStatusDOTnet ', '\n', 
-        color(b), 'http://goo.gl/V15fe ', color(2), ' PlanetMinecraftDOTcom\n', 
-        color(b), 'http://goo.gl/SjDdf ', color(2), ' XtremeTop100DOTcom\n', 
+        color(b), 'http://goo.gl/FjExa ', color(6), ' on MineStatus.', '\n', 
+        color(b), 'http://goo.gl/V15fe ', color(6), ' on PlanetMinecraft.\n', 
+        color(b), 'http://goo.gl/SjDdf ', color(6), ' on XtremeTop100.\n', 
         color(2), 'To earn ', color(a), 'Extra', color(2), ' Crindars! \n', 
         color(2), 'Remember the more you vote the more you earn!'
         )
