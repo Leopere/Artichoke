@@ -20,3 +20,4 @@ HeroChat/chatters/*
 *.wav
 Server_Secrets.txt
 McMMO/Resources/
+Towny/backup/*
