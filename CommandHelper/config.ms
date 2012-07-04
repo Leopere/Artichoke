@@ -598,7 +598,15 @@ staff:/door $target = make_effect(ploc($target), DOOR_TOGGLE, 64)
 ## /ScreenShots = >>>
 level0:/Fumbledore = runas(~op, /warp Fumbledore)
 level0:/donate = msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), ' Donate using the /buy command.')
-level0:/vote = msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), ' Vote Daily at the following links \n', color(b), 'http://goo.gl/FjExa \n', color(b), 'http://goo.gl/V15fe \n', color(b), 'http://goo.gl/SjDdf \n', color(2), 'To earn ', color(a), 'Extra', color(2), ' Crindars! \n', color(2), 'Remember the more you vote the more you earn!')
+level0:/vote = >>>
+        msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), ' Vote Daily at the following links \n', 
+        color(b), 'http://goo.gl/FjExa ', color(2), ' MineStatusDOTnet ', '\n', 
+        color(b), 'http://goo.gl/V15fe ', color(2), ' PlanetMinecraftDOTcom\n', 
+        color(b), 'http://goo.gl/SjDdf ', color(2), ' XtremeTop100DOTcom\n', 
+        color(2), 'To earn ', color(a), 'Extra', color(2), ' Crindars! \n', 
+        color(2), 'Remember the more you vote the more you earn!'
+        )
+<<<
 level0:/facebook = msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), ' Show Love & Support! \n', color(2), 'Join, Like and Share us on Facebook! \n', color(b), 'http://goo.gl/52k9a ',  color(2), 'Facebook Link.')
 level0:/Youtube = msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), ' Like, Share, Comment and Subscribe our Youtube Channel at. ', color(b), 'http://goo.gl/LYOEh')
 # level0:/twitter = msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), ' Follow us at twitter for Event Updates. ', color(b), 'http://goo.gl/LYOEh')
