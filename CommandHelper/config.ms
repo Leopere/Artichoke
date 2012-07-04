@@ -609,6 +609,8 @@ level0:/vote = >>>
 <<<
 level0:/facebook = msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), ' Show Love & Support! \n', color(2), 'Join, Like and Share us on Facebook! \n', color(b), 'http://goo.gl/52k9a ',  color(2), 'Facebook Link.')
 level0:/Youtube = msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), ' Like, Share, Comment and Subscribe our Youtube Channel at. ', color(b), 'http://goo.gl/LYOEh')
+level0:/progress = msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), ' See what were working on? \n', color(2), 'click ', color(b),  'http://goo.gl/mCm6u', color(2), ' For details.')
+level0:/bugs = msg msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), ' See known bugs or report a new one? \n', , color(2), 'click ', color(b),  'http://goo.gl/ooy8g', color(2), ' For our Bug Tracker.')
 # level0:/twitter = msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), ' Follow us at twitter for Event Updates. ', color(b), 'http://goo.gl/LYOEh')
 warps:/Fuu = runas(~op, /mvtp Fuu), set_pmode(player(), CREATIVE), msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), ' Welcome to Fuu our Creative Map.')
     warps:/Box1 = run(/warp box1), set_pmode(player(), CREATIVE), msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), ' Welcome to Fuu our Creative Map. \n', color(2), 'You are in Creative Build Sandbox #1')
