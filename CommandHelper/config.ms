@@ -285,6 +285,10 @@ msg(color(6), ‘Ghasts are annoying and unbelievable cute, I hate you for makin
 # Can be given to others with their appropriate group alias's
 ##===================================================================##
 staff:/homeworld = runas(~op, /mvtp world)
+warps:/FoodMarket = runas(~op, /warp ZooGiftShop)
+warps:/HardwareMarket = runas(~op, /warp HardwareMarket)
+warps:/BuilderMarket = runas(~op, /warp BuilderMarket)
+warps:/AlchemyMarket = runas(~op, /warp AlchemyMarket)
 warps:/Mugen = runas(~op, /mvtp Mugen)
 warps:/Jin = runas(~op, /mvtp Jin)
 #warps:/Fuu = runas(~op, /mvtp Fuu)
