@@ -3,7 +3,7 @@ towns=
 pvp=true
 forcepvp=false
 # Can players found towns and claim plots in this world?
-claimable=true
+claimable=false
 worldmobs=true
 forcetownmobs=false
 firespread=true
