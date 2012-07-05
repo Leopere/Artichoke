@@ -142,17 +142,20 @@ trainee:/promote [$pname] = >>>
 #Assassin2:
 #ETC...
 level0:/check = run(/hawk tool)
-level0:/help = >>>
+level1:/MemberHelp = >>>
     run(/warp commands)
     msg(
-        color(5), 'Welcome to ', color(6), 'ReaveCraft ', color(5), 'Command General ', color(b), 'Hospital'
+        color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), 
+        'Command General ', color(b), 'Hospital \n', 
+        color(2), 'Members Only Section '
     )
-    msg(
-        color(5), 'You may choose to leave at any time by typing ', color(b), '/Spawn ', color(5), 'OR '
-    )
-    msg(
-        color(5), 'You may type ', color(b), '/Home ', color(5), 'if you have set one yet'
-    )
+<<<
+level0:/help = >>>
+    run(/warp commands)
+    msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), 
+    color(2), 'Welcome to ', color(6), 'ReaveCraft ', color(2), 'Command General ', color(b), 'Hospital \n', 
+    color(2), 'You may choose to leave at any time by typing ', color(b), '/Spawn ', color(2), 'OR \n', 
+    color(2), 'You may type ', color(b), '/Home ', color(2), 'if you have set one yet')
 <<<
     ## Basic aliases with specific permissions to give to each player class ##
     chicken:/chicken = runas(~op, /md chicken)
@@ -400,7 +403,7 @@ inheritall:/c = msg('§ff §77 §ee §cc §dd §99 §bb §aa\n§00 §88 §66 §4
 ##==================================##
 ##+++++++++++++++++++SERVER MAINTENANCE STUFF+++++++++++++++++++++++++##
 ##++++++++++++++++++Comment Out Before Launch+++++++++++++++++++++++++##
-staff:/HelpStaff = runas(~op, /warp HelpStaff)
+#staff:/HelpStaff = runas(~op, /warp HelpStaff)
 maintenancemode:/xchgrp $group = runas(~op, concat(/pex user player() group set $group))
 maintenancemode:/xchown [$user] [$group] = runas(~op, concat(/pex user $user group set $group))
 maintenancemode:/ideal = >>>

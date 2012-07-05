@@ -1,29 +1,33 @@
 # 
 # ScheduledAnnouncer Configuration File
 # =====================================
+## Find Replace all instances of these words to be sure to stick with a standard 
+## color coding for the chat to keep it from getting hard to read.
 announcement:
   enabled: true
   random: false
-  prefix: '&1[&4ReaveCraft&1]&a '
+  prefix: '&1[&4ReaveCraft.com&1]&a '
   interval: 120
   messages:
-  - Welcome to ReaveCraft Do &b/help &a for more info!
-  - Support us! &6/Vote&a, &c/Youtube&a, &9/Facebook&a, &6/Donate
-  - Make sure to check the &b/help &a to learn more! &a Our &b/help &a Is updated constantly.
-  - Remember that placing &8Iron&a, &6Gold&a, &bDiamond&a blocks protects your Stuff!
-  - Check the &9/Facebook&a for Competition Details Events and Screenshots!
-  - Share Comment Rate and Subscribe to our &c/Youtube&a for tutorials and trailers.
-  - '&6/Donate&a gets you instant rank ups and keeps us alive!'
-  - You can rank up to level 2 automatically when you hit level 75 in your classes skill.
-  - Level 2 players can create /ChestShops to sell their items.
-  - You cannot Pick up items when Disguised.
-  - Getting Hit will undisguise you.
-  - You can quick teleport out of spawn using &b/Worldnames&a to go build!
+  - 'Welcome to ReaveCraft Do &b/help &a for more info!'
+  - 'Support us! &6/Vote&a, &c/Youtube&a, &9/Facebook&a, &6&6/Donate&a'
+  - 'Remember that placing &8Iron&a, &6Gold&a, &bDiamond&a blocks protects your Stuff!'
+  - 'Check the &9/Facebook&a for Competition Details Events and Screenshots!'
+  - 'Share Comment Rate and Subscribe to our &c/Youtube&a for tutorials and trailers.'
+  - '&6&6/Donate&a&a gets you instant rank ups and keeps us alive!'
+  - 'You can rank up to level 2 automatically when you hit level 75 in your classes skill.'
+  - 'Level 2 players can create /ChestShops to sell their items.'
+  - 'You cannot Pick up items when Disguised.'
+  - 'Getting Hit will undisguise you.'
+  - 'You can quick teleport out of spawn using &b/Worldnames&a to go find a warp to build at!'
   - '&4[[&1DeathReaver&4]]&a Are Admins.'
   - '&4[&5PainReaver&4]&a Are Moderators.'
   - 'Think you ve been griefed or robbed? &b/Check&a to know who to &4kill!'
-  - 'Come AFK with us! Youll earn Interest on your Crindar Balance up to 500$!'
+  - 'You earn Interest on your Crindar Balance up to 500$ while playing here.!'
   - 'Want to know what Chamunks does all day? Type &e/Progress &ato see what hes working on.'
   - 'Bugs to report? Issues to be raised? Type &e/Bugs &a to visit our bug tracker.'
   - '&5Maintenance Mondays! &aScheduled server downtime &5Monday &aNights at &510PM &8-5EST'
-  - '&6/Donate &ato Level Up and be able to Create &6Chest Shops&a and &6Towns&a or even &5Nations&a!'
+  - '&6&6/Donate&a &ato Level Up and be able to Create &6Chest Shops&a and &6&6Towns&a&a or even &5&5Nations&a&a!'
+  - '&6[Towny]:&a &6Towns&a can be purchased for 5,000 Crindars by Level 1 Members. &6/Donate&a for details.'
+  - '&6[Towny]:&a &5Nations&a can be purchased for 20,000 Crindars by a level 4 Member. &6/Donate&a for details.'
+  - '&6[Towny]:&a Warring &5Nations&a will occur and &6Towns&a can apply to be members of Admin Owned &5Nations&a.'
