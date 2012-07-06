@@ -141,22 +141,6 @@ trainee:/promote [$pname] = >>>
 #Assassin1:
 #Assassin2:
 #ETC...
-level0:/check = run(/hawk tool)
-level1:/MemberHelp = >>>
-    run(/warp commands)
-    msg(
-        color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), 
-        'Command General ', color(b), 'Hospital \n', 
-        color(2), 'Members Only Section '
-    )
-<<<
-level0:/help = >>>
-    run(/warp commands)
-    msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), 
-    color(2), 'Welcome to ', color(6), 'ReaveCraft ', color(2), 'Command General ', color(b), 'Hospital \n', 
-    color(2), 'You may choose to leave at any time by typing ', color(b), '/Spawn ', color(2), 'OR \n', 
-    color(2), 'You may type ', color(b), '/Home ', color(2), 'if you have set one yet')
-<<<
     ## Basic aliases with specific permissions to give to each player class ##
     chicken:/chicken = runas(~op, /md chicken)
     cow:/cow = runas(~op, /md cow)
@@ -230,7 +214,7 @@ msg(color(6), ‘Ghasts are annoying and unbelievable cute, I hate you for makin
 #    <<<
     staff:/SetExpLevel [$target] [$levels] = set_plevel($target, $levels)
     staff:/ruler = msg(_3d_distance(sk_pos1(), sk_pos2()) '§6spaces between the selected blocks.')
-    staff:/helpstaff = runas(~op, /warp StaffHelp)
+
     
         ##==================StaffTeleportCommands============##
         #This needs attention, I plan on people having access to '/homeworld' at some point
@@ -630,3 +614,20 @@ warps:/Fuu = runas(~op, /mvtp Fuu), set_pmode(player(), CREATIVE), msg(color(1),
     warps:/Box8 = run(/warp box8), set_pmode(player(), CREATIVE), msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), ' Welcome to Fuu our Creative Map. \n', color(2), 'You are in Creative Build Sandbox #8')
     warps:/Box9 = run(/warp box9), set_pmode(player(), CREATIVE), msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), ' Welcome to Fuu our Creative Map. \n', color(2), 'You are in Creative Build Sandbox #9')
 warps:/worldnames = runas(~op, /warp WorldNames)
+staff:/helpstaff = runas(~op, /warp StaffHelp)
+level0:/check = run(/hawk tool)
+level1:/MemberHelp = >>>
+    run(/warp commands)
+    msg(
+        color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), 
+        'Command General ', color(b), 'Hospital \n', 
+        color(2), 'Members Only Section '
+    )
+<<<
+level0:/help = >>>
+    run(/warp commands)
+    msg(color(1), '[', color(4), 'ReaveCraft', color(1), ']', color(2), 
+    color(2), 'Welcome to ', color(6), 'ReaveCraft ', color(2), 'Command General ', color(b), 'Hospital \n', 
+    color(2), 'You may choose to leave at any time by typing ', color(b), '/Spawn ', color(2), 'OR \n', 
+    color(2), 'You may type ', color(b), '/Home ', color(2), 'if you have set one yet')
+<<<
