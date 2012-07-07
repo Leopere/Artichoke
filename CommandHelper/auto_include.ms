@@ -1,3 +1,7 @@
+auto_include.ms
+
+
+
 #===============================================================================
 #
 #   Sample external mscript include
@@ -8,24 +12,24 @@
 proc(_pgroup_name, @pgroup,
 	reg_replace('\\d', '', @pgroup)
 	assign(@pgnames, array(
-		peon: concat(color(3), '[', color(8), 'Peon' color(3), ']'),
-		trainee: concat(color(3), '[', color(8), 'Trainee' color(3), ']'),
-		hobo: concat(color(3), '[', color(f), 'Hobo' color(3), ']'),
-		worker: concat(color(3), '[', color(f), 'Worker' color(3), ']'),
-		assassin: concat(color(3), '[', color(0), 'ShadowWraith', color(3), ']'),
-		blacksmith: concat(color(3), '[', color(7), 'InfernalAnvil' color(3), ']'),
-		builder: concat(color(3), '[', color(6) 'CursedMason', color(3), ']'),
-		farmer: concat(color(3), '[', color(2), 'DemonCultivator' color(3), ']'),
-		hunter: concat(color(3), '[', color(c), 'SilentStalker' color(3), ']'),
-		miner: concat(color(3), '[', color(8), 'StoneGoblin' color(3), ']'),
-		moderator: concat(color(4), '[', color(5), 'PainReaver' color(4), ']'),
-		deltaTeam: concat(color(4), '[', color(6), 'SoulReaver' color(4), ']'),
-		admin: concat(color(4), '[', color(1), 'DeathReaver' color(4), ']')
+		peon:        color(3). '['. color(8). 'Peon' color(3). ']',
+		trainee:     color(3). '['. color(8). 'Trainee' color(3). ']',
+		hobo:        color(3). '['. color(f). 'Hobo' color(3). ']',
+		worker:      color(3). '['. color(f). 'Worker' color(3). ']',
+		assassin:    color(3). '['. color(0). 'ShadowWraith'. color(3). ']',
+		blacksmith:  color(3). '['. color(7). 'InfernalAnvil' color(3). ']',
+		builder:     color(3). '['. color(6) 'CursedMason'. color(3). ']',
+		farmer:      color(3). '['. color(2). 'DemonCultivator' color(3). ']',
+		hunter:      color(3). '['. color(c). 'SilentStalker' color(3). ']',
+		miner:       color(3). '['. color(8). 'StoneGoblin' color(3). ']',
+		moderator:   color(4). '['. color(5). 'PainReaver' color(4). ']',
+		deltaTeam:   color(4). '['. color(6). 'SoulReaver' color(4). ']',
+		admin:       color(4). '['. color(1). 'DeathReaver' color(4). ']'
 	))
 	if(array_index_exists(@pgnames, @pgroup),
 		return(@pgnames[@pgroup])
 	,#else
-		return(concat(color(4)'NO GROUP'))
+		return(color(4)'. NO GROUP'))
 	)
 )
 #proc(_promote, )
@@ -59,30 +63,28 @@ proc(_iterate_cuboid, @b1, @b2, @proc_name,
 )
 ##EndTimeoutCommand##
 proc(_cooldown, @time, @id,
-	if(and(not(is_null(assign(@oldTime, get_value(concat('cooldown_time_', player(), '_', @id))))), lt(divide(subtract(time(), @oldTime), 1000), @time)),
-		die('§cYou have to wait before doing that again.')
-		,
-		store_value(concat('cooldown_time_', player(), '_', @id), time())
+	if(!is_null(assign(@oldTime, get_value('cooldown_time_'. player(). '_'. @id))) && lt((time() - @oldTime) / 1000, @time),
+		die('§cYou have to wait before doing that again.'),
+		store_value('cooldown_time_'. player(). '_', @id, time())
 	)
 )
+
 ##Class Spawn Warp Call##
-proc(_spawn, runas(~op, concat('/warp ',pgroup()[0],'spawn')))
+proc(_spawn, runas(~op, '/warp' pgroup()[0] 'spawn'))
 
 ##ServerWide Cooldown would be great for community spawning of enderdragon for example.
 proc(_scooldown_global, @time, @id,
-	if(and(not(is_null(assign(@oldTime, get_value(concat('cooldown_time_', @id))))), lt(divide(subtract(time(), @oldTime), 1000), @time)),
-		die('§cYou have to wait before doing that again.')
-		,
-		store_value(concat('cooldown_time_', @id), time())
+	if(!is_null(assign(@oldTime, get_value(concat('cooldown_time_', @id)))) && lt((time() - @oldTime) / 1000, @time),
+		die('§cYou have to wait before doing that again.'),
+		store_value('cooldown_time_'. @id, time())
 	)
 )
 
 
 ##Player Specific Cooldown
 proc(_pcooldown, @time, @id,
-	if(and(not(is_null(assign(@oldTime, get_value(concat('cooldown_time_', player(), '_', @id))))), lt(divide(subtract(time(), @oldTime), 1000), @time)),
-		die('§cYou have to wait before doing that again.')
-		,
-		store_value(concat('cooldown_time_', player(), '_', @id), time())
+	if(!is_null(assign(@oldTime, get_value('cooldown_time_'. player(). '_'. @id))) && lt((time() - @oldTime) / 1000, @time),
+		die('§cYou have to wait before doing that again.'),
+		store_value('cooldown_time_'. player(). '_'. @id, time())
 	)
 )
