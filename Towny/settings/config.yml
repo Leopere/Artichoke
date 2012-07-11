@@ -231,15 +231,15 @@ town:
  
   # Minimum number of plots any towns home plot must be from the next town.
   # This will prevent someone founding a town right on your doorstep
-  min_distance_from_town_homeblock: '5'
+  min_distance_from_town_homeblock: '32'
  
-  # Maximum distance between homblocks.
+  # Maximum distance between homeblocks.
   # This will force players to build close together.
   max_distance_between_homeblocks: '0'
  
   # The maximum townblocks available to a town is (numResidents * ratio).
   # Setting this value to 0 will instead use the level based jump values determined in the town level config.
-  town_block_ratio: '8'
+  town_block_ratio: '10'
   # The size of the square grid cell. Changing this value is suggested only when you first install Towny.
   # Doing so after entering data will shift things unwantedly. Using smaller value will allow higher precision,
   # at the cost of more work setting up. Also, extremely small values will render the caching done useless.
@@ -594,8 +594,8 @@ default_perm_flags:
     ally:
       build: 'false'
       destroy: 'false'
-      item_use: 'false'
-      switch: 'false'
+      item_use: 'true'
+      switch: 'true'
     outsider:
       build: 'false'
       destroy: 'false'
@@ -821,7 +821,7 @@ war:
     # This many people must be online in target town in order to place a war flag in their domain.
     min_players_online_in_town: '2'
     # This many people must be online in target nation in order to place a war flag in their domain.
-    min_players_online_in_nation: '3'
+    min_players_online_in_nation: '5'
     max_active_flags_per_player: '1'
     flag:
       waiting_time: 1m
