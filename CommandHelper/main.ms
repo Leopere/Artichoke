@@ -1,6 +1,3 @@
-main.ms
-
-
 ######################################################
 #
 #   Sample Main file. This file is run when the server
